@@ -7,7 +7,7 @@ const TodoList = ({goals, toggleTodo}) => {
       <div className="list">
         {goals.map((item) => {
           return(
-              <Todo key={item.id} {...item} toggleTodo={toggleTodo} />
+              <Todo key={item.id} {...item} toggleTodo={toggleTodo}  />
              
           )})}
              

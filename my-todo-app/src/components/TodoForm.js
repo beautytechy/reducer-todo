@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "../../src/App.css"
 
-const TodoForm = ({ addTodo }) => {
+const TodoForm = ({ addTodo, clearCompleted }) => {
     const [todoInput, setTodo] = useState('');
 
 
@@ -8,11 +9,6 @@ const TodoForm = ({ addTodo }) => {
         setTodo(e.target.value);
     };
        
-// const submitTodo = (e) => {
-//     e.preventDefault();
-//     dispatch({ type: 'ADD_NEW_TODO', payload: todo })
-// };
-
 const handleSubmit = (e) => {
     e.preventDefault();
     addTodo(todoInput);
@@ -26,6 +22,7 @@ const handleSubmit = (e) => {
                 onChange={handleChanges}
             />
             <button type="submit">Add To List</button>
+            <button className="clear_completed" onClick={clearCompleted}>Clear Completed</button>
         </form>
     )
 }
