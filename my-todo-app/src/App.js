@@ -1,18 +1,22 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { initialState, reducer } from "./reducers/Reducer";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
-import './App.css';
 
-const App = () => {
+function App () {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+ const addTodo = todoName => {
+    dispatch({ type: 'ADD_NEW_TODO', payload: todoName })
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-      <h1>My Todo App</h1>
+      <h1>My To Do App</h1>
       </header>
-      <TodoForm dispatch={dispatch} />
-      <TodoList state={state} />
+      <TodoForm addTodo={addTodo} />
+      <TodoList {...state} />
     </div>
   );
 }
