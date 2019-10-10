@@ -1,5 +1,7 @@
-import React, { useReducer } from "react";
-import {initialState, reducer} from "../reducers/Reducer";
+import React from "react";
+import "../../src/App.css"
+
+
 
 const Todo = ({ item, id, completed, toggleTodo }) => {
 
@@ -8,10 +10,7 @@ const Todo = ({ item, id, completed, toggleTodo }) => {
    
 
     return (
-        <div
-            className={`item${completed ? ' completed' : ''}`}
-            // onClick={() => toggleTodo(state.id)}
-        >
+        <div className={`item${completed ? ' completed' : ''}`} onClick={() => toggleTodo(id)}>
             <p>{item}</p>
         </div>
     );

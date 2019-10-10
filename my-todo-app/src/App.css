@@ -7,6 +7,20 @@
 color: black;
 }
 
+.item {
+  background-color: rgb(185, 241, 239);
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 20px; 
+}
+
+.item.completed {
+  text-decoration: line-through;
+  background-color: yellow;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
