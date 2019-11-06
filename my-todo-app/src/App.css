@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  color: black;
+}
+
+.list {
+color: black;
+}
+
+.item {
+  background-color: rgb(185, 241, 239);
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 20px; 
+}
+
+.item.completed {
+  text-decoration: line-through;
+  background-color: yellow;
+}
+
+.clear_completed {
+width: 100px;
+}
+
+.App-link {
+  color: #09d3ac;
+}
